@@ -13,7 +13,7 @@ def analyze(request):
     extraspaceremover = request.POST.get('extraspaceremover', 'off')
     charcount = request.POST.get('charcount', 'off')
     if removepunc=="on":
-        punctuations='''/[-[\]{}()*+?.,\\^$|#\]/,;:''"\\$&"'''
+        punctuations='''/[-[\]{}()*+?.,\\^$|#\]/,;:''"\\$&"@='''
         analyzed=""
         for char in djtext:
             if char not in punctuations:
